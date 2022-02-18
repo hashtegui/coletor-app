@@ -1,0 +1,13 @@
+Estrutura projeto
+
+
+Coleta_App
+	controler/
+		loginController.py
+	view/
+		LoginView.py
+	model/
+		Produto.py	
+	dao/
+		LogicaModel
+	main.py

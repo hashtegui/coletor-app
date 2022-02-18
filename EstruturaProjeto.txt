@@ -5,6 +5,8 @@ Coleta_App
 	controler/
 		loginController.py
 	view/
+		kv/
+			loginScreen.kv
 		LoginView.py
 	model/
 		Produto.py	

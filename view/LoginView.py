@@ -8,5 +8,8 @@ import os
 
 KV = Builder.load_file("./view/kv/loginScreen.kv")
 
-login = loginController.login
+class LoginView():
+    login = loginController.login
+
+
 

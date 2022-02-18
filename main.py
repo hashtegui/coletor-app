@@ -1,5 +1,6 @@
 from kivy.app import App
 from kivy.lang import Builder
+from controller.loginController import *
 
 KV = Builder.load_file('./view/principal.kv')
 

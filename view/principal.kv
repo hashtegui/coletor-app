@@ -1,36 +1,42 @@
+#import c source.app_lib.constants
+#:import log controller.loginController
 MainWindow:
 
-
-<MainWindow@BoxLayout>:
-    orientation: 'vertical'
-    spacing: '10dp'
-
+<MainWindow@Screen>:
     canvas.before:
         Color:
-            rgba: 0.1, 0.1, 0.1, 1
+            rgba: 0.3, 0.1, 0.1, 1
         Rectangle:
             pos:self.pos
             size: self.size
-    Widget:
-
-    TextInput:
-        hint_text: "Login"
-        size_hint: .7,.2
-        pos_hint: {'center_x': 0.5,'center_y': 0.5}
-        padding: ('10dp', '10dp', '10dp', '10dp')
-        multiline: False
-    
-    TextInput:
-        hint_text: "Senha"
-        size_hint: .7,.2
-        padding: ('10dp', '10dp', '10dp', '10dp')
-        pos_hint: {'center_x': 0.5,'center_y': 0.5}
-        multiline: False
-
     BoxLayout:
-        orientation:'vertical'
-        Button:
-            size_hint: .2,.2
-            text: "Enviar"
-            pos_hint: {'center_x': 0.5}
+        orientation: 'vertical'
+        spacing: '10dp'
+
+        
         Widget:
+
+        TextInput:
+            id:login
+            hint_text: "Login"
+            size_hint: .7,.2
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+            padding: ('10dp', '10dp', '10dp', '10dp')
+            multiline: False
+        
+        TextInput:
+            id:senha
+            hint_text: "Senha"
+            size_hint: .7,.2
+            padding: ('10dp', '10dp', '10dp', '10dp')
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+            multiline: False
+
+        BoxLayout:
+            orientation:'vertical'
+            Button:
+                size_hint: .2,.2
+                text: "Enviar"
+                pos_hint: {'center_x': 0.5}
+                on_press: print(log.login(login.text,senha.text))
+            Widget:

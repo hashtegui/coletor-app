@@ -2,6 +2,8 @@ Estrutura projeto
 
 
 Coleta_App
+	assets/
+		capa_kazanto.jpg
 	controler/
 		loginController.py
 	view/
@@ -11,5 +13,7 @@ Coleta_App
 	model/
 		Produto.py	
 	dao/
-		LogicaModel
+		produtodao.py
 	main.py
+	requirements.txt
+	buildozer.spec

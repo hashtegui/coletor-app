@@ -1,8 +1,21 @@
 #import c source.app_lib.constants
 #:import log view.LoginView
+#:import NoTransition kivy.uix.screenmanager.FallOutTransition
 MainWindow:
 
-<MainWindow@Screen>:
+<MainWindow>:
+    transition: NoTransition()
+    LoginWindow:
+    DashScreen:
+
+
+<DashScreen@Screen>:
+    name:'dash'
+    Button:
+        text: 'passou'
+
+<LoginWindow@Screen>:
+    name:'login'
     canvas.before:
         # Color:
         #     rgba: 0.3, 0.1, 0.1, 1
@@ -40,5 +53,7 @@ MainWindow:
                 size_hint: .2,.2
                 text: "Enviar"
                 pos_hint: {'center_x': 0.5}
-                on_press: print(log.LoginView.login(login.text,senha.text))
+                on_press: 
+                    if log.LoginView.login(login.text,senha.text):\
+                    app.root.current = "dash"
             Widget:

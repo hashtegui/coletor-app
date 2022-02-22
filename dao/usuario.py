@@ -1,13 +1,17 @@
 import requests
 
-url = 'http://192.168.0.36:5000/funcionario'
+
 
 class UsuarioDao():
     def __init__(self) -> None:
-        pass
+        self._url = 'http://192.168.0.36:5000/funcionario'
+    
+    @property
+    def url(self):
+        return self._url
     
     def listar_usuarios(self):
-        req = requests.get(url)
+        req = requests.get(self.url)
         usuarios = req.json()
         return usuarios
 

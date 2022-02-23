@@ -1,6 +1,7 @@
 #import c source.app_lib.constants
-#:import log src.view.LoginView
+#:import log src.controller.LoginController
 #:import FallOutTransition kivy.uix.screenmanager.FallOutTransition
+#:import Factory kivy.factory.Factory
 MainWindow:
 
 <MainWindow>:
@@ -9,13 +10,19 @@ MainWindow:
     DashScreen:
 
 
+<Teste@Popup>:
+    auto_dimiss:False
+    Button:
+        text:'Voltar'
+        on_press: root.dimiss()
+
 <DashScreen@Screen>:
     name:'dash'
     Button:
         text: 'passou'
         on_press: app.root.current= 'login'
 
-<LoginWindow@Screen>:
+<LoginWindow>:
     name:'login'
     canvas.before:
         # Color:
@@ -51,10 +58,10 @@ MainWindow:
         BoxLayout:
             orientation:'vertical'
             Button:
+                id:logar
                 size_hint: .2,.2
                 text: "Enviar"
                 pos_hint: {'center_x': 0.5}
-                on_press: 
-                    if log.LoginView.login(login.text,int(senha.text)):\
-                    app.root.current = "dash"; 
+                on_press: root.abrir_popup()
+              
             Widget:

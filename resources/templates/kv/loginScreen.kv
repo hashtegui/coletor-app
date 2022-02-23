@@ -1,10 +1,10 @@
 #import c source.app_lib.constants
-#:import log view.LoginView
-#:import NoTransition kivy.uix.screenmanager.FallOutTransition
+#:import log src.view.LoginView
+#:import FallOutTransition kivy.uix.screenmanager.FallOutTransition
 MainWindow:
 
 <MainWindow>:
-    transition: NoTransition()
+    transition: FallOutTransition()
     LoginWindow:
     DashScreen:
 
@@ -23,7 +23,7 @@ MainWindow:
         Rectangle:
             pos:self.pos
             size: self.size
-            source: 'assets/capa_kazanto.jpg'
+            source: 'resources/assets/capa_kazanto.jpg'
 
     BoxLayout:
         orientation: 'vertical'

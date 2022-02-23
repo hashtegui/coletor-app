@@ -1,5 +1,5 @@
 from kivy.lang import Builder
-from controller import loginController
+from src.controller import loginController
 
 
 #KV = Builder.load_file("./view/kv/loginScreen.kv")

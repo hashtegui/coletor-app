@@ -1,6 +1,6 @@
 from kivy.app import App
-from view.MainView import MainWindow
-from view.LoginView import LoginView
+from src.view.MainView import MainWindow
+from src.view.LoginView import LoginView
 
 class Main(App):
     def build(self):

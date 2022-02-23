@@ -1,4 +1,4 @@
-from dao.usuario import UsuarioDao
+from src.dao.usuario import UsuarioDao
 
 ud = UsuarioDao()
 

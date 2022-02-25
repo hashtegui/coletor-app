@@ -4,7 +4,10 @@ from kivy.lang import Builder
 
 from src.view.LoginView import LoginWindow
 
-
+class DashScreen(Screen):
+    def on_touch_down(self, touch):
+        print('to mexendo aqui')
+        return super().on_touch_down(touch)
 
 class MainWindow(ScreenManager):
     pass

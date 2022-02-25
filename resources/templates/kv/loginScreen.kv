@@ -16,9 +16,17 @@ MainWindow:
         text:'Voltar'
         on_press: root.dimiss()
 
-<DashScreen@Screen>:
+<DashScreen>:
     name:'dash'
+    FloatLayout:
+        Widget:
+            size_hint: 1,.5
+            Label:
+                text:'Teste'
+    
+    
     Button:
+        size_hint: .2,.2
         text: 'passou'
         on_press: app.root.current= 'login'
 

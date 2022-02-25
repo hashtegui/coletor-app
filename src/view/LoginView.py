@@ -6,6 +6,7 @@ from kivy.metrics import dp
 from src.dao.usuario import UsuarioDao
 
 
+
 class LoginWindow(Screen):
 
     def __init__(self, **kw):

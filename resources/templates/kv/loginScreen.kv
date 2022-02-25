@@ -20,15 +20,20 @@ MainWindow:
     name:'dash'
     FloatLayout:
         Widget:
+            canvas:
+                Rectangle:
+                    size:self.size
+                    pos: self.pos
+                Color:
+                    rgba: (1,0,0,1)
             size_hint: 1,.5
-            Label:
-                text:'Teste'
+        Label:
+            text:'Teste'
     
-    
-    Button:
-        size_hint: .2,.2
-        text: 'passou'
-        on_press: app.root.current= 'login'
+        Button:
+            size_hint: .2,.2
+            text: 'passou'
+            on_press: app.root.current= 'login'
 
 <LoginWindow>:
     name:'login'
